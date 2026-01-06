@@ -1,7 +1,7 @@
-     import arcade
-     import random
+import arcade
+import random
 
-     class BabboNatale(arcade.Window):
+class BabboNatale(arcade.Window):
     def __init__(self, larghezza, altezza, titolo, selfmuto = False):
         super().__init__(larghezza, altezza, titolo)
         self.babbo = None
