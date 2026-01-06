@@ -1,38 +1,7 @@
-# compiti-x-natale
-import arcade
-import random
+     import arcade
+     import random
 
-
-
-"""
-Compiti per casa: La scorpacciata di Babbo Natale
-Dato questo giochino come partenza, aggiungere le seguenti modifiche:
-1 - Scaricare, disegnare o generare con AI un'immagine di sfondo
-     e mostrarla poi come background
-2 - Premendo il tasto "M", il suono verrà mutato. Premendolo di nuovo
-     il suono deve tornare. Avete due possibilità: o evitate proprio
-     di far partire il suono, o vi guardate come funziona play_sound
-     e vedete se c'è qualcosa che vi può essere utile
-3 - Contate quanti biscotti vengono raccolti, salvatelo in una variabile
-4 - Mostrate con draw_text il punteggio (numero di biscotti raccolti)
-5 - Fate in modo che il nuovo biscotto venga sempre creato almeno a 100 pixel
-    di distanza rispetto al giocatore
-
-6 - Ogni volta che babbo natale mangia 5 biscotti, dalla prossima volta
-    in  poi verranno creati 2 biscotti per volta. Dopo averne mangiati
-    altri 5, vengono creati 3 biscotti per volta, poi 4, e via dicendo
-
-7 - (Opzionale) Ogni volta che genero un biscotto, al 3% di possibilità potrebbe essere un
-         "golden cookie". Il golden cookie rimane solo 3 secondi sullo schermo
-        ma vale 100 punti. 
-
-        - Crea una nuova immagine per il golden cookie
-        - Gestisci la creazione, il timer, ecc
-        - Gestisci il punteggio
-
-Fate questo esercizio in una repository su git e mandate il link al vostro account sul form
-"""
-class BabboNatale(arcade.Window):
+     class BabboNatale(arcade.Window):
     def __init__(self, larghezza, altezza, titolo, selfmuto = False):
         super().__init__(larghezza, altezza, titolo)
         self.babbo = None
@@ -50,7 +19,7 @@ class BabboNatale(arcade.Window):
         
         self.setup()
     
-    def setup(self):
+      def setup(self):
         self.babbo = arcade.Sprite("./assets/babbo.png")
         self.babbo.center_x = 300
         self.babbo.center_y = 100
@@ -142,9 +111,9 @@ class BabboNatale(arcade.Window):
         elif tasto in (arcade.key.RIGHT, arcade.key.D):
             self.right_pressed = False
 
-def main():
+     def main():
     gioco = BabboNatale(600, 600, "Babbo Natale")
     arcade.run()
 
-if __name__ == "__main__":
+     if __name__ == "__main__":
     main()
